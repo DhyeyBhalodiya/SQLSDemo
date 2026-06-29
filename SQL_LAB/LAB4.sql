@@ -1,0 +1,164 @@
+--PART-A
+
+-- 1.Update SPI of all students from 7.00 to 8.00.
+SELECT  * FROM STUDENT 
+UPDATE Student 
+SET SPI = 8.00 
+WHERE SPI = 7.00;
+
+
+-- 2.Change city of HETVI from RAJKOT to AHMEDABAD.
+SELECT  * FROM STUDENT 
+UPDATE Student 
+SET CITY  = 'AHMEDABAD' 
+WHERE SNAME = 'HETVI';
+
+
+-- 3.Update SPI of DEEP to 9.20 and city to VADODARA.
+SELECT * FROM STUDENT;
+UPDATE STUDENT
+SET SPI = 9.20,
+	CITY = 'VADODARA'
+WHERE SNAME = 'DEEP';
+
+
+-- 4.Update SPI of DHARMIK to 8.50.
+SELECT * FROM STUDENT;
+UPDATE STUDENT
+SET SPI = 8.50
+WHERE SNAME = 'DHARMIK';
+
+
+-- 5.Update branch name from COMPUTER to IT.
+SELECT * FROM STUDENT 
+UPDATE STUDENT
+SET BRANCH = 'IT'
+WHERE BRANCH = 'COMPUTER';
+
+
+-- 6.Update branch of RAJ to AUTOMOBILE.
+SELECT * FROM STUDENT
+UPDATE STUDENT
+SET BRANCH = 'AUTOMOBILE'
+WHERE SNAME = 'RAJ';
+
+
+-- 7.Update SPI to 7.50 where STDID is between 103 and 107.
+SELECT * FROM STUDENT;
+UPDATE STUDENT
+SET SPI = 7.50
+WHERE STDID BETWEEN 103 AND 107;
+
+
+-- 8.Update city of PARAG to MUMBAI.
+SELECT * FROM STUDENT
+UPDATE STUDENT 
+SET CITY = 'MUMBAI'
+WHERE SNAME = 'PARAG';
+
+
+-- 9.Update SPI of RIYA to 6.00.
+SELECT * FROM STUDENT
+UPDATE STUDENT
+SET SPI = 6.00
+WHERE SNAME = 'RIYA';
+
+
+-- 10. Update SPI of SMAIR to 7.20 and branch to ELECTRICAL.
+SELECT * FROM STUDENT 
+UPDATE STUDENT 
+SET SPI = 7.20 , 
+    BRANCH = 'ELECTRICAL'
+WHERE SNAME = 'SMAIR';
+
+
+--PART-B
+
+
+-- 11. Give 10% increment in SPI.
+SELECT * FROM STUDENT;
+UPDATE STUDENT
+SET SPI = (SPI * 1.10)
+WHERE (SPI * 1.10) <= 9.99;
+
+
+-- 12. Increase SPI by 20% for all students.
+SELECT * FROM STUDENT
+UPDATE STUDENT
+SET SPI = (SPI*1.20)
+WHERE (SPI * 1.20) <= 9.99;
+
+
+-- 13. Increase SPI by 0.50 in all records.
+SELECT * FROM STUDENT
+UPDATE STUDENT 
+SET SPI = (SPI + 0.50)
+WHERE (SPI + 0.50) <= 9.99;
+
+
+-- 14. Update branch to 'EC' and SPI to 8.00 and city to Surat where SNAME is KRUNAL.
+SELECT * FROM STUDENT;
+UPDATE STUDENT 
+SET SPI = 8.00,
+	BRANCH = 'EC',
+	CITY = 'SURAT'
+WHERE SNAME = 'KRUNAL';
+
+
+-- 15. Update city to 'RAJKOT' and SPI to 7.00 where branch is CIVIL and stdid is less than 105.
+SELECT * FROM STUDENT;
+UPDATE STUDENT
+SET CITY = 'RAJKOT',
+    SPI = 7.00
+WHERE BRANCH = 'CIVIL'
+  AND STDID < 105;
+
+
+--PART-C
+
+
+-- 16. Update SPI of student with stdid 110 to NULL.
+SELECT * FROM STUDENT
+UPDATE STUDENT
+SET SPI = NULL
+WHERE STDID = 110;
+
+
+-- 17. Update branch of VISHAL to NULL.
+SELECT * FROM STUDENT
+UPDATE STUDENT
+SET BRANCH = 'NULL'
+WHERE SNAME = 'VISHAL';
+
+
+-- 18. Display names of students whose SPI is NULL.
+SELECT SNAME FROM STUDENT
+WHERE SPI IS NULL;
+
+
+-- 19. Display students who have branch assigned.
+SELECT * FROM STUDENT
+WHERE BRANCH IS NOT NULL
+    AND UPPER(BRANCH) <> 'NULL';
+
+
+
+-- 20. Update student with stdid 108 to name DARSHAN, branch COMPUTER, and SPI 8.50.
+SELECT * FROM STUDENT
+UPDATE STUDENT 
+SET SNAME = 'DARSHAN', BRANCH = 'COMPUTER', SPI = 8.50
+WHERE stdid = 108;
+
+
+-- 21. Update city to SURAT where SPI is less than 7.00.
+SELECT * FROM STUDENT
+UPDATE STUDENT
+SET CITY = 'SURAT'
+WHERE SPI < 7.00;
+
+
+-- 22. Update city to NULL and branch to MECHANICAL where stdid is 109.
+SELECT * FROM STUDENT
+UPDATE STUDENT
+SET CITY = NULL, BRANCH = 'MECHANICAL'
+WHERE stdid = 109;
