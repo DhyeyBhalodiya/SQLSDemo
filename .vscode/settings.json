@@ -1,0 +1,21 @@
+{
+    "sqltools.connections": [
+        {
+            "mysqlOptions": {
+                "authProtocol": "xprotocol",
+                "enableSsl": "Disabled"
+            },
+            "ssh": "Disabled",
+            "previewLimit": 50,
+            "server": "localhost",
+            "port": 1433,
+            "driver": "MySQL",
+            "name": "EmployeeDataBase",
+            "group": "No Group",
+            "username": "sa",
+            "password": "YourStrong@ Pass123",
+            "connectionTimeout": 30,
+            "database": "CSE_3B_422"
+        }
+    ]
+}
