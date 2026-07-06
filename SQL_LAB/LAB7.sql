@@ -75,9 +75,9 @@ WHERE FIRSTNAME LIKE '_[AEIOU]%';
 
 
 -- 13. Display employees detail whose FIRSTNAME length ≥ 5.
-SELECT * 
-FROM EMPLOYEE
-WHERE LENGTH.(FIRSTNAME) >= 5;
+-- SELECT * 
+-- FROM EMPLOYEE
+-- WHERE LENGTH.(FIRSTNAME) >= 5;
 
 
 -- 14. Display employees detail whose LASTNAME starts with ‘PA’.
