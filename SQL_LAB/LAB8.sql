@@ -172,8 +172,8 @@ GROUP BY DEPARTMENT;
 SELECT
 -- DEPARTMENT,
     AVG(DISTINCT SALARY)
-    FROM EMPLOYEE
-    GROUP BY DEPARTMENT;
+FROM EMPLOYEE
+GROUP BY DEPARTMENT;
 
 
 -- 24. Count the number of employees for each department in every city.
